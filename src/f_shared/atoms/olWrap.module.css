@@ -1,0 +1,11 @@
+.Ol {
+  padding: 30px;
+}
+
+.currentPath {
+  color: red;
+}
+
+.otherPath {
+  color: rgba(0, 0, 0, 0.6);
+}
