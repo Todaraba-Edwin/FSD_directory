@@ -7,7 +7,7 @@ export default function layout({ children }: DefaultChildren_Props) {
   return (
     <main className={styles.UserMain}>
       <nav className={styles.SideNav}>
-        <Atoms.OlWrap list={Const.defaultPathLinks} />
+        <Atoms.Link_OlWrap list={Const.defaultPathLinks} />
       </nav>
       <div>{children}</div>
     </main>

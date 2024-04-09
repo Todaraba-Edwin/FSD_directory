@@ -6,6 +6,7 @@ export default function HomeIndex() {
   return (
     <div>
       <Atoms.MainTitle title="HomePage" />
+      <Widgets.ApiHealthChecked />
       <Widgets.HomeLinkUls />
     </div>
   );

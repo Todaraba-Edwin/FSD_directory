@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/f_shared/atoms/globals.css";
 import { Inter } from "next/font/google";
+import { ReactQueryClient } from "@/f_shared/atoms";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,9 @@ export default function RootLayout({
 }: Readonly<DefaultChildren_Props>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ReactQueryClient>{children}</ReactQueryClient>
+      </body>
     </html>
   );
 }
