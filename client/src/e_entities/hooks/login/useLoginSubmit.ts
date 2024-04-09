@@ -1,7 +1,7 @@
 import { useState } from "react";
 // src
 import * as Post from "@/e_entities/api/post";
-import * as Tools from "@/e_entities/tools/loginTools";
+import * as Tools from "@/e_entities/tools";
 
 // lib
 import axios from "axios";
