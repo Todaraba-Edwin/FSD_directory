@@ -8,16 +8,37 @@ const PORT = 3003;
 
 app.use(bodyParser.json());
 
-app.use(cors({
-    origin: 'http://localhost:3001'
-  }));
+app.use(
+  cors({
+    origin: "http://localhost:3001",
+  })
+);
 
-app.get("/healthckeck", (req, res) => {
-  console.log("[GET ROUTE]");
+app.get("/api/healthckeck", (req, res) => {
+  console.log("[GET : /healthckeck]");
   res.send({
     message: "SUCCESS",
     data: Const.users,
   });
+});
+
+app.post("/api/login", (req, res) => {
+  console.log("login_info", req.body);
+  const { email: reqEmail } = req.body;
+  const findUser = Const.users.find(({ email }) => reqEmail === email);
+  if (findUser) {
+    res.status(200).send({
+      message: "SUCCESS",
+      data: {
+        userInfo: reqEmail,
+      },
+    });
+  } else {
+    res.status(404).send({
+      message: "User not Found",
+      statuas: 401,
+    });
+  }
 });
 
 app.listen(PORT, () =>
