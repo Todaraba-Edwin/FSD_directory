@@ -4,7 +4,7 @@ type DefaultChildren_Props = {
 
 type LoginForm_Props = DefaultChildren_Props & {
   formTitle: string;
-  inputs: LoginRegister[];
+  inputs: LoginRegister_Type[];
   buttonName: string;
   register: any;
   onSubmit: () => void;

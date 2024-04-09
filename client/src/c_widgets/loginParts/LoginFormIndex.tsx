@@ -8,10 +8,9 @@ export function LoginFormIndex() {
   const {
     // formsFn
     register,
-    handleSubmit,
     onSubmit,
 
-    // asynx
+    // async
     isSuccessMessage,
     isErrMessage,
     isPending,
@@ -20,7 +19,7 @@ export function LoginFormIndex() {
   return (
     <Features.LoginForm
       formTitle="LoginForm"
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={onSubmit}
       inputs={Const.LoginRegisterList}
       register={register}
       buttonName="Login"

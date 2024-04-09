@@ -8,11 +8,11 @@ import axios from "axios";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 export const useLoginSubmit = () => {
-  const { register, handleSubmit } = useForm<LoiginInputs>();
+  const { register, handleSubmit } = useForm<LoiginInputs_Type>();
   const { postLogin, isPending } = Post.usePostLogin();
   const [isSuccessMessage, setIsSuccessMessage] = useState<string>("");
   const [isErrMessage, setIsErrMessage] = useState<string>("");
-  const onSubmit: SubmitHandler<LoiginInputs> = (formdata) => {
+  const onSubmit: SubmitHandler<LoiginInputs_Type> = (formdata) => {
     setIsErrMessage("");
     setIsSuccessMessage("");
 
@@ -35,10 +35,9 @@ export const useLoginSubmit = () => {
   return {
     // formsFn
     register,
-    handleSubmit,
-    onSubmit,
+    onSubmit: handleSubmit(onSubmit),
 
-    // asynx
+    // async
     isSuccessMessage,
     isErrMessage,
     isPending,

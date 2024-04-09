@@ -12,8 +12,8 @@ export function LoginForm({
   return (
     <form onSubmit={onSubmit}>
       <h2>{formTitle}</h2>
-      {inputs.map(({ type, key }) => (
-        <input key={key} type={type} {...register(key)} />
+      {inputs.map(({ type, key, options }) => (
+        <input key={key} type={type} {...register(key)} {...options} />
       ))}
       <div>
         <button type="submit">{buttonName}</button>
