@@ -1,9 +1,9 @@
 "use client";
-import { useGetHealthCheck } from "@/e_entities/api/get/useGetHealthCheck";
 import React from "react";
+import * as Get from "@/e_entities/api/get";
 
 export function ApiHealthChecked() {
-  const { data: res, isLoading, isError } = useGetHealthCheck();
+  const { data: res, isLoading, isError } = Get.useGetHealthCheck();
 
   return (
     <div>

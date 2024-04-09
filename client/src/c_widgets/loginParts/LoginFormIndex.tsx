@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
+import * as Features from "@/d_features/forms";
 import * as Entity from "@/e_entities/hooks/login";
-import * as Features from "@/d_features/molecules/forms";
 import * as Const from "@/f_shared/constrant";
 
 export function LoginFormIndex() {
