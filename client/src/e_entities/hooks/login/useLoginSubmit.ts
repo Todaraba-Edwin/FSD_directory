@@ -24,11 +24,10 @@ export const useLoginSubmit = () => {
         setIsSuccessMessage(message);
       },
       onError: (err: Error) => {
-        if (axios.isAxiosError(err)) {
-          if (!err.response?.data) return;
-          const { message } = err.response.data;
-          setIsErrMessage(message);
-        }
+        if (!axios.isAxiosError(err)) return;
+        if (!err.response?.data) return;
+        const { message } = err.response.data;
+        setIsErrMessage(message);
       },
     });
   };
