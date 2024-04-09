@@ -1,5 +1,5 @@
-import HomeIndex from "@/b_pages/home/HomeIndex";
+import * as Pages from "@/b_pages";
 
-export default function Home() {
-  return <HomeIndex />;
+export default function HomeIndex() {
+  return <Pages.HomePage />;
 }

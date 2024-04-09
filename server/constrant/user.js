@@ -1,8 +1,8 @@
 export const users = [
   {
-    email: "johndoe@example.com",
+    email: "test01",
   },
   {
-    email: "alicesmith@example.com",
+    email: "test02",
   },
 ];

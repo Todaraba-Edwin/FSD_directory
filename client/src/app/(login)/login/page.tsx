@@ -1,12 +1,6 @@
 import React from "react";
-import * as Atoms from "@/f_shared/atoms";
-import * as Widget from "@/c_widgets/loginParts";
+import * as Pages from "@/b_pages";
 
-export default function Login() {
-  return (
-    <div>
-      <Atoms.BackLink />
-      <Widget.LoginForm />
-    </div>
-  );
+export default function LoginIndex() {
+  return <Pages.LoginPage />;
 }

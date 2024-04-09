@@ -30,12 +30,13 @@ app.post("/api/login", (req, res) => {
     res.status(200).send({
       message: "SUCCESS",
       data: {
+        message: "로그인을 성공했습니다",
         userInfo: reqEmail,
       },
     });
   } else {
     res.status(404).send({
-      message: "User not Found",
+      message: "사용자를 찾을 수 없습니다.",
       statuas: 401,
     });
   }
