@@ -1,7 +1,7 @@
 "use client";
 import styles from "./userLayout.module.css";
-import * as Atoms from "@/f_shared/atoms";
-import * as Tools from "@/f_shared/tools";
+import * as Feat from "@/d_features/LinksUi";
+import * as Tools from "@/e_entities/tools";
 import * as Const from "@/f_shared/constrant";
 
 export default function Template({ children }: { children: React.ReactNode }) {
@@ -13,7 +13,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   return (
     <>
       <nav className={styles.SideNav}>
-        <Atoms.Link_OlWrap
+        <Feat.Link_OlWrap
           list={isStudents ? Const.PathLinks.Student : Const.PathLinks.Teacher}
         />
       </nav>

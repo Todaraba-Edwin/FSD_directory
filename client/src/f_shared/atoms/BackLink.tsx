@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React from "react";
-import * as Tools from "@/f_shared/tools";
+import * as Tools from "@/e_entities/tools";
 import * as Const from "@/f_shared/constrant";
 
 export function BackLink() {

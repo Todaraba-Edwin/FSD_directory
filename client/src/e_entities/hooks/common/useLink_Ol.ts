@@ -1,9 +1,8 @@
 import * as NextNav from "next/navigation";
+import * as Tools from "@/e_entities/tools";
 import * as Const from "@/f_shared/constrant";
-import * as Tools from "@/f_shared/tools";
-import styles from "@/f_shared/atoms/link_OlWrap.module.css";
 
-export const useLink_Ol = () => {
+export const useLink_Ol = ({ styles }: ModuleCSS_Props) => {
   const router = NextNav.useRouter();
   const onRouter = (href: string, type: string) => () => {
     Tools.localStorage_set({
