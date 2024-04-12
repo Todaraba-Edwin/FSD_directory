@@ -6,7 +6,7 @@ type ResponseDto = {
   data: HealthData_Type[];
 };
 
-const queryFn = async (): Promise<ResponseDto | any> => {
+const queryFn = async (): Promise<ResponseDto> => {
   const res = await Instance.Base.get("/healthckeck");
   return res.data;
 };
