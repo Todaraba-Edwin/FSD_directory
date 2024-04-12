@@ -15,8 +15,10 @@ app.use(
   })
 );
 
+// API_GET
 app.get("/api/healthckeck", Get.handle_HeathCheck);
 
+// API_POST
 app.post("/api/login", Post.handle_Login);
 
 app.listen(PORT, () =>
