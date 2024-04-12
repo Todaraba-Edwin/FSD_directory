@@ -8,8 +8,9 @@ export function ApiHealthChecked() {
   return (
     <div>
       <h2>
-        ApiHealthChecked :{" "}
-        {`"${isLoading ? "isLoading..." : isError ? "error" : res?.message}"`}
+        {`ApiHealthChecked : "${
+          isLoading ? "isLoading..." : isError ? "error" : res?.message
+        }"`}
       </h2>
     </div>
   );

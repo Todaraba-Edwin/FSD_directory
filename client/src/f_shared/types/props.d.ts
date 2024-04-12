@@ -9,3 +9,7 @@ type LoginForm_Props = DefaultChildren_Props & {
   register: any;
   onSubmit: () => void;
 };
+
+type Localstorage_Props = {
+  name: string;
+};

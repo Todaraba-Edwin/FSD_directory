@@ -2,29 +2,23 @@
 
 import React from "react";
 import styles from "./link_OlWrap.module.css";
-import * as NextNav from "next/navigation";
 import * as Const from "@/f_shared/constrant";
+import * as AtomsHooks from "@/f_shared/atoms/atomsHooks";
 
 type Props = {
   list: any[];
 };
 
 export function Link_OlWrap({ list }: Props) {
-  const router = NextNav.useRouter();
-  const onRouter = (href: string) => () => {
-    router.push(href);
-  };
-  const selectedSegment = NextNav.useSelectedLayoutSegment();
+  const { onRouter, onSetLiColor } = AtomsHooks.useLink_Ol();
 
   return (
     <ol className={styles.Ol}>
-      {list.map(({ link, path }) => (
+      {list.map(({ type, link, path }) => (
         <li
-          className={`${Const.Hover_fontWeight[600]} ${
-            selectedSegment === link ? styles.currentPath : styles.otherPath
-          }`}
+          className={`${Const.Hover_fontWeight[600]} ${onSetLiColor(link)}`}
           key={link}
-          onClick={onRouter(path)}
+          onClick={onRouter(path, type)}
         >
           {link}
         </li>
