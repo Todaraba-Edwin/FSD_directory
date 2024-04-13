@@ -9,7 +9,12 @@ type HealthData_Type = {
   email: string;
 };
 
-type ResonsePostLogin_Type =  {
+type ResonsePostLogin_Type = {
   message: string;
   userInfo: string;
+};
+
+type RequestFormlogin = {
+  email: string;
+  password: string | number;
 };
