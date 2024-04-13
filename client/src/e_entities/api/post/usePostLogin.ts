@@ -1,20 +1,14 @@
 import * as Instance from "@/f_shared/axiosinstance";
 import * as Tans from "@tanstack/react-query";
 
-type RequestionData = any;
-
-type ResponseDto = {
-  message: string;
-  data: {
-    message: string;
-    userInfo: string;
-  };
-};
-
-const mutationFn: Tans.MutationFunction<ResponseDto, RequestionData> = async (
-  req
-) => {
-  const res = await Instance.Base.post<ResponseDto>("/login", req);
+const mutationFn: Tans.MutationFunction<
+  ResponseDto<ResonsePostLogin_Type>,
+  RequestionData<any>
+> = async (req) => {
+  const res = await Instance.Base.post<ResponseDto<ResonsePostLogin_Type>>(
+    "/login",
+    req
+  );
   return res.data;
 };
 
