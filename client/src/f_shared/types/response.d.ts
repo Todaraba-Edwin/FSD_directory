@@ -1,3 +1,3 @@
 type HealthData_Type = {
-  email: string;
+    email: string;
 };

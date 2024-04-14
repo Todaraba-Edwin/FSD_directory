@@ -1,16 +1,14 @@
 .LayoutMain {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .LoginWrapp {
-  width: 300px;
-  height: 400px;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0px 0px 20px 1px rgba(222, 107, 107, 0.8);
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px 1px rgba(222, 107, 107, 0.8);
 }
-
-

@@ -1,9 +1,9 @@
 import React from "react";
 
 type Props = {
-  title: string;
+    title: string;
 };
 
 export function MainTitle({ title }: Props) {
-  return <h1>{title}</h1>;
+    return <h1>{title}</h1>;
 }

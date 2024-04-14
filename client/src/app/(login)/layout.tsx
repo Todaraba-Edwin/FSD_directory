@@ -1,13 +1,13 @@
 import styles from "./loginLayout.module.css";
 
 export default function HomeLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <main className={styles.LayoutMain}>
-      <div className={styles.LoginWrapp}>{children}</div>
-    </main>
-  );
+    return (
+        <main className={styles.LayoutMain}>
+            <div className={styles.LoginWrapp}>{children}</div>
+        </main>
+    );
 }

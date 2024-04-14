@@ -5,32 +5,34 @@ import * as Tools from "@/e_entities/tools";
 import * as Const from "@/f_shared/constrant";
 
 export function BackLink() {
-  const router = useRouter();
-  const onBack = () => {
-    router.back();
-  };
-  return (
-    <div className={`${Const.Hover_fontWeight[600]}`} onClick={onBack}>
-      BackLink
-    </div>
-  );
+    const router = useRouter();
+    const onBack = () => {
+        router.back();
+    };
+    return (
+        <div className={`${Const.Hover_fontWeight[600]}`} onClick={onBack}>
+            BackLink
+        </div>
+    );
 }
 
 export function GoHomeLink() {
-  const router = useRouter();
-  const onBack = () => {
-    const getUserType = Tools.LocalStorage_get({
-      name: Const.LocalStorageKeys.USERTYPE,
-    });
+    const router = useRouter();
+    const onBack = () => {
+        const getUserType = Tools.LocalStorage_get({
+            name: Const.LocalStorageKeys.USERTYPE,
+        });
 
-    if (getUserType) {
-      Tools.LocalStorage_remove({ name: Const.LocalStorageKeys.USERTYPE });
-    }
-    router.push("/");
-  };
-  return (
-    <div className={`${Const.Hover_fontWeight[600]}`} onClick={onBack}>
-      GoHome
-    </div>
-  );
+        if (getUserType) {
+            Tools.LocalStorage_remove({
+                name: Const.LocalStorageKeys.USERTYPE,
+            });
+        }
+        router.push("/");
+    };
+    return (
+        <div className={`${Const.Hover_fontWeight[600]}`} onClick={onBack}>
+            GoHome
+        </div>
+    );
 }

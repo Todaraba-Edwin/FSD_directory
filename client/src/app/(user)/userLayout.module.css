@@ -1,9 +1,9 @@
 .UserMain {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  height: 100dvh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 100dvh;
 }
 
 .SideNav {
-  background: rgba(200, 200, 200, 0.7);
+    background: rgba(200, 200, 200, 0.7);
 }

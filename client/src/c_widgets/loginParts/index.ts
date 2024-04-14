@@ -1,1 +1,1 @@
-export * from './LoginFormIndex'
+export * from "./LoginFormIndex";
