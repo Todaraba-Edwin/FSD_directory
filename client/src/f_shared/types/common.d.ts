@@ -8,7 +8,7 @@ type Set_Localstorage_Type = ({
     payload,
 }: Set_Localstorage_Props) => void;
 
-type Get_Localstorage_Type = ({ name }: Localstorage_Props) => string | null;
+type Get_Localstorage_Type = ({ name }: Localstorage_Props) => string;
 type Remove_Localstorage_Type = ({ name }: Localstorage_Props) => void;
 
 // Elements
